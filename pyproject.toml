@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "celery-eternal"
+version = "0.1.2"
+description = "Celery task subclass for jobs that should run forever"
+authors = ["Leo Singer"]
+license = "GPL-2+"
+readme = "README.md"
+packages = [{include = "celery_eternal"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+celery = {extras = ["redis"], version = "^5.2.7"}
+celery-singleton = { git = "https://github.com/joshvera/celery-singleton", rev = "d50878f"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
